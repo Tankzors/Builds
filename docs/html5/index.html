@@ -4,6 +4,13 @@
 	<meta charset="utf-8"/>
 	<title>Tankzors</title>
 	<link rel="shortcut icon" href="favicon.png" type="image/png">
+	<script type="text/javascript">
+		var agent = window.navigator.userAgent;
+		if (agent.includes("Safari") && !agent.includes("Chrome")) {
+			if (!window.navigator.vibrate)
+				window.navigator.vibrate = function(pattern) {}
+		}
+	</script>
 </head>
 <body>
 	<canvas id="khanvas" width="800" height="600" tabindex="0"></canvas>
